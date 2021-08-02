@@ -1,0 +1,19 @@
+doctype html
+html(lang='zh')
+  head
+    title 成绩
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0')
+  link(rel='stylesheet' href='https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+  script(src='https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js')
+  script(src='https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js')
+  body
+    table.table
+      caption 成绩单
+      thead
+        tr
+          each val in label
+            th= val
+      tbody
+        tr
+          each val in value
+            td= val
