@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>成绩查询</title>
+    <title>上传</title>
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
         integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
@@ -30,17 +30,17 @@
 
 <body>
     <div class="container wrapper">
-        <h2>成绩查询</h2>
-        <form action="/grade" method="post">
+        <h2>上传</h2>
+        <form action="/uploadFile" method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="name">姓名:</label>
-                <input type="text" class="form-control" id="name" name="username" placeholder="请输入姓名">
+                <label for="name">选择文件:</label>
+                <input type="file" class="form-control" id="excel" name="excel" >
             </div>
             <div class="form-group">
-                <label for="phone">手机尾号:</label>
-                <input type="number" class="form-control" id="phone" name="phone" placeholder="请输入手机尾号">
+                <label for="name">秘钥:</label>
+                <input type="text" class="form-control" id="pwd" name="pwd" >
             </div>
-            <button type="submit" class="btn btn-primary">查询</button>
+            <button type="submit" class="btn btn-primary">上传</button>
         </form>
     </div>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

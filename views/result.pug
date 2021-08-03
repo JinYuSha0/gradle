@@ -1,0 +1,16 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title 结果
+  body
+    img(style='width: 100%' src= success ? 'http://localhost:3000/success.jfif' : 'http://localhost:3000/failure.jfif')
+    if success 
+        h1 成功
+    else 
+        h1 失败
+    if !success
+        h2 #{reason}
+    button(onclick='javascript:window.location="/upload"') 返回
